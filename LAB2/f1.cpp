@@ -12,5 +12,6 @@ int main(){
         int cpu = omp_get_num_procs();
         cout << "There are "<<cpu<<" CPUs"<<endl;
 
+
     }
 }
