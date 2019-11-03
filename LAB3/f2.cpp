@@ -18,10 +18,11 @@ int main(){
             b[i] = i+2;
         }
     }
-    #pragma omp parallel sections    {
+    #pragma omp parallel sections 
+    {
         #pragma omp section
         { 
-            // printf ("id = %d, \n", omp_get_thread_num());
+            printf ("id = %d, \n", omp_get_thread_num());
             #pragma omp parallel for
             for(int i = 0; i< N; i++){
                 c[i] = a[i] + b[i];
@@ -30,7 +31,7 @@ int main(){
 
         #pragma omp section
         { 
-            // printf ("id = %d, \n", omp_get_thread_num());
+            printf ("id = %d, \n", omp_get_thread_num());
             #pragma omp parallel for
             for(int i = 0; i< N; i++){
                 c[i] = a[i] * b[i];
