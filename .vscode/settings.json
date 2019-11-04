@@ -2,5 +2,7 @@
     "files.associations": {
         "iostream": "cpp",
         "cmath": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Enabled",
+    "workbench.colorTheme": "Material Theme Ocean High Contrast"
 }

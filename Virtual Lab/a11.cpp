@@ -2,7 +2,7 @@
 // find maximum value after m range increments. 
 #include<bits/stdc++.h> 
 #include<iostream>
-#include <openmp.h>
+
 #include <mpi.h>
 
 using namespace std; 
