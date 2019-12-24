@@ -39,17 +39,17 @@ int main(int argc, char* argv[]){
 
 	// Generate Necessary files
 	// Create Sequential Multiply test log
-	FILE* fp;
-	fp = fopen("SequentialMultiplyTest.txt", "w+");
-	fclose(fp);
+	// FILE* fp;
+	// fp = fopen("SequentialMultiplyTest.txt", "w+");
+	// fclose(fp);
 
-	// Create Parallel Multiply test log
-	fp = fopen("ParallelMultiplyTest.txt", "w+");
-	fclose(fp);
+	// // Create Parallel Multiply test log
+	// fp = fopen("ParallelMultiplyTest.txt", "w+");
+	// fclose(fp);
 
-	// Create Optimized Parallel Multiply test log
-	fp = fopen("OptimizedParallelMultiplyTest.txt", "w+");
-	fclose(fp);
+	// // Create Optimized Parallel Multiply test log
+	// fp = fopen("OptimizedParallelMultiplyTest.txt", "w+");
+	// fclose(fp);
 
 	for(int dimension=200; dimension<=2000; dimension+=200){
 		optimizedParallelMultiplyTest(dimension, iterations);
@@ -251,11 +251,11 @@ void sequentialMultiplyTest(int dimension, int iterations){
 	printf("..................................\n");
 	
 	// File write
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Test : Sequential Multiply        \n");
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Dimension : %d\n", dimension);
-	fprintf(fp, "..................................\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Test : Sequential Multiply        \n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Dimension : %d\n", dimension);
+	// fprintf(fp, "..................................\n");
 
 	double* opmLatency = malloc(iterations * sizeof(double));
 	TYPE** matrixA = randomSquareMatrix(dimension);
@@ -281,10 +281,10 @@ void sequentialMultiplyTest(int dimension, int iterations){
 	printf("----------------------------------\n");
 
 	// File write
-	fprintf(fp, "\n");
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Analyze Measurements              \n");
-	fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Analyze Measurements              \n");
+	// fprintf(fp, "----------------------------------\n");
 
 	double sum = 0.0;
 	double sumSquared = 0.0;
@@ -305,9 +305,9 @@ void sequentialMultiplyTest(int dimension, int iterations){
 	printf("----------------------------------\n");
 
 	//File write
-	fprintf(fp, "Mean               : %f\n", mean);
-	fprintf(fp, "Standard Deviation : %f\n", standardDeviation);
-	fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Mean               : %f\n", mean);
+	// fprintf(fp, "Standard Deviation : %f\n", standardDeviation);
+	// fprintf(fp, "----------------------------------\n");
 
 	// Releasing memory
 	fclose(fp);
@@ -328,11 +328,11 @@ void parallelMultiplyTest(int dimension, int iterations){
 	printf("..................................\n");
 	
 	// File write
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Test : Parallel Multiply          \n");
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Dimension : %d\n", dimension);
-	fprintf(fp, "..................................\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Test : Parallel Multiply          \n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Dimension : %d\n", dimension);
+	// fprintf(fp, "..................................\n");
 
 	double* opmLatency = malloc(iterations * sizeof(double));
 	TYPE** matrixA = randomSquareMatrix(dimension);
@@ -358,10 +358,10 @@ void parallelMultiplyTest(int dimension, int iterations){
 	printf("----------------------------------\n");
 
 	// File write
-	fprintf(fp, "\n");
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Analyze Measurements              \n");
-	fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Analyze Measurements              \n");
+	// fprintf(fp, "----------------------------------\n");
 
 	double sum = 0.0;
 	double sumSquared = 0.0;
@@ -382,9 +382,9 @@ void parallelMultiplyTest(int dimension, int iterations){
 	printf("----------------------------------\n");
 
 	//File write
-	fprintf(fp, "Mean               : %f\n", mean);
-	fprintf(fp, "Standard Deviation : %f\n", standardDeviation);
-	fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Mean               : %f\n", mean);
+	// fprintf(fp, "Standard Deviation : %f\n", standardDeviation);
+	// fprintf(fp, "----------------------------------\n");
 
 	// Releasing memory
 	fclose(fp);
@@ -405,11 +405,11 @@ void optimizedParallelMultiplyTest(int dimension, int iterations){
 	printf("..................................\n");
 	
 	// File write
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Test : Optimized Parallel Multiply\n");
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Dimension : %d\n", dimension);
-	fprintf(fp, "..................................\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Test : Optimized Parallel Multiply\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Dimension : %d\n", dimension);
+	// fprintf(fp, "..................................\n");
 
 	double* opmLatency = malloc(iterations * sizeof(double));
 	TYPE** matrixA = randomSquareMatrix(dimension);
@@ -435,10 +435,10 @@ void optimizedParallelMultiplyTest(int dimension, int iterations){
 	printf("----------------------------------\n");
 
 	// File write
-	fprintf(fp, "\n");
-	fprintf(fp, "----------------------------------\n");
-	fprintf(fp, "Analyze Measurements              \n");
-	fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "\n");
+	// fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Analyze Measurements              \n");
+	// fprintf(fp, "----------------------------------\n");
 
 	double sum = 0.0;
 	double sumSquared = 0.0;
@@ -459,9 +459,9 @@ void optimizedParallelMultiplyTest(int dimension, int iterations){
 	printf("----------------------------------\n");
 
 	//File write
-	fprintf(fp, "Mean               : %f\n", mean);
-	fprintf(fp, "Standard Deviation : %f\n", standardDeviation);
-	fprintf(fp, "----------------------------------\n");
+	// fprintf(fp, "Mean               : %f\n", mean);
+	// fprintf(fp, "Standard Deviation : %f\n", standardDeviation);
+	// fprintf(fp, "----------------------------------\n");
 
 	// Releasing memory
 	fclose(fp);
